@@ -1,0 +1,130 @@
+2024-07-08 11:28:46,730 P598115 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "KDD12_x10",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "16",
+    "embedding_regularizer": "1e-05",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['Depth', 'Position', 'Impression'], 'preprocess': 'convert_to_bucket', 'type': 'categorical'}, {'active': True, 'dtype': 'float', 'name': ['DisplayURL', 'AdID', 'AdvertiserID', 'QueryID', 'KeywordID', 'TitleID', 'DescriptionID', 'UserID', 'Gender', 'Age'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'Click'}",
+    "layer_norm": "True",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "model": "DCNv3",
+    "model_id": "DCNv3_KDD12_002_91d2a219",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_cross_layers": "8",
+    "num_heads": "1",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2024",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KDD12/test.csv",
+    "train_data": "../../../data/KDD12/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/KDD12/valid.csv",
+    "verbose": "1"
+}
+2024-07-08 11:28:46,730 P598115 INFO Set up feature processor...
+2024-07-08 11:28:46,731 P598115 WARNING Skip rebuilding ../../../data/KDD12_x10/feature_map.json. Please delete it manually if rebuilding is required.
+2024-07-08 11:28:46,731 P598115 INFO Load feature_map from json: ../../../data/KDD12_x10/feature_map.json
+2024-07-08 11:28:46,731 P598115 INFO Set column index...
+2024-07-08 11:28:46,731 P598115 INFO Feature specs: {
+    "AdID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 280097, 'vocab_size': 280098}",
+    "AdvertiserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 14416, 'vocab_size': 14417}",
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Depth": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "DescriptionID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 614455, 'vocab_size': 614456}",
+    "DisplayURL": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22591, 'vocab_size': 22592}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "Impression": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 90, 'vocab_size': 91}",
+    "KeywordID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 358326, 'vocab_size': 358327}",
+    "Position": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "QueryID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 997505, 'vocab_size': 997506}",
+    "TitleID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 762415, 'vocab_size': 762416}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1618170, 'vocab_size': 1618171}"
+}
+2024-07-08 11:28:51,144 P598115 INFO Total number of parameters: 74866145.
+2024-07-08 11:28:51,144 P598115 INFO Loading data...
+2024-07-08 11:28:51,144 P598115 INFO Loading data from h5: ../../../data/KDD12_x10/train.h5
+2024-07-08 11:29:19,105 P598115 INFO Train samples: total/113096830, blocks/1
+2024-07-08 11:29:19,105 P598115 INFO Loading data from h5: ../../../data/KDD12_x10/valid.h5
+2024-07-08 11:29:22,431 P598115 INFO Validation samples: total/14137104, blocks/1
+2024-07-08 11:29:22,431 P598115 INFO Loading train and validation data done.
+2024-07-08 11:29:22,431 P598115 INFO Start training: 11310 batches/epoch
+2024-07-08 11:29:22,431 P598115 INFO ************ Epoch=1 start ************
+2024-07-08 11:40:58,874 P598115 INFO Train loss: 0.174784
+2024-07-08 11:40:58,875 P598115 INFO Evaluation @epoch 1 - batch 11310: 
+2024-07-08 11:41:25,833 P598115 INFO ===
+2024-07-08 11:41:25,833 P598115 INFO [Metrics] AUC: 0.786898 - logloss: 0.154261
+2024-07-08 11:41:25,834 P598115 INFO Save best model: monitor(max)=0.786898
+2024-07-08 11:41:26,444 P598115 INFO ************ Epoch=1 end ************
+2024-07-08 11:53:11,326 P598115 INFO Train loss: 0.168376
+2024-07-08 11:53:11,327 P598115 INFO Evaluation @epoch 2 - batch 11310: 
+2024-07-08 11:53:39,191 P598115 INFO ===
+2024-07-08 11:53:39,192 P598115 INFO [Metrics] AUC: 0.786714 - logloss: 0.154321
+2024-07-08 11:53:39,193 P598115 INFO Monitor(max)=0.786714 STOP!
+2024-07-08 11:53:39,193 P598115 INFO Reduce learning rate on plateau: 0.000100
+2024-07-08 11:53:39,323 P598115 INFO ************ Epoch=2 end ************
+2024-07-08 12:05:18,037 P598115 INFO Train loss: 0.156015
+2024-07-08 12:05:18,037 P598115 INFO Evaluation @epoch 3 - batch 11310: 
+2024-07-08 12:05:46,218 P598115 INFO ===
+2024-07-08 12:05:46,218 P598115 INFO [Metrics] AUC: 0.804016 - logloss: 0.150788
+2024-07-08 12:05:46,219 P598115 INFO Save best model: monitor(max)=0.804016
+2024-07-08 12:05:48,067 P598115 INFO ************ Epoch=3 end ************
+2024-07-08 12:17:24,909 P598115 INFO Train loss: 0.151806
+2024-07-08 12:17:24,909 P598115 INFO Evaluation @epoch 4 - batch 11310: 
+2024-07-08 12:17:53,123 P598115 INFO ===
+2024-07-08 12:17:53,123 P598115 INFO [Metrics] AUC: 0.805725 - logloss: 0.150424
+2024-07-08 12:17:53,124 P598115 INFO Save best model: monitor(max)=0.805725
+2024-07-08 12:17:54,868 P598115 INFO ************ Epoch=4 end ************
+2024-07-08 12:29:14,155 P598115 INFO Train loss: 0.151826
+2024-07-08 12:29:14,155 P598115 INFO Evaluation @epoch 5 - batch 11310: 
+2024-07-08 12:29:39,728 P598115 INFO ===
+2024-07-08 12:29:39,728 P598115 INFO [Metrics] AUC: 0.806843 - logloss: 0.150229
+2024-07-08 12:29:39,729 P598115 INFO Save best model: monitor(max)=0.806843
+2024-07-08 12:29:41,496 P598115 INFO ************ Epoch=5 end ************
+2024-07-08 12:41:21,623 P598115 INFO Train loss: 0.151922
+2024-07-08 12:41:21,623 P598115 INFO Evaluation @epoch 6 - batch 11310: 
+2024-07-08 12:41:49,173 P598115 INFO ===
+2024-07-08 12:41:49,173 P598115 INFO [Metrics] AUC: 0.806191 - logloss: 0.150461
+2024-07-08 12:41:49,174 P598115 INFO Monitor(max)=0.806191 STOP!
+2024-07-08 12:41:49,174 P598115 INFO Reduce learning rate on plateau: 0.000010
+2024-07-08 12:41:49,299 P598115 INFO ************ Epoch=6 end ************
+2024-07-08 12:53:20,925 P598115 INFO Train loss: 0.141887
+2024-07-08 12:53:20,925 P598115 INFO Evaluation @epoch 7 - batch 11310: 
+2024-07-08 12:53:49,075 P598115 INFO ===
+2024-07-08 12:53:49,075 P598115 INFO [Metrics] AUC: 0.800534 - logloss: 0.154133
+2024-07-08 12:53:49,076 P598115 INFO Monitor(max)=0.800534 STOP!
+2024-07-08 12:53:49,076 P598115 INFO Reduce learning rate on plateau: 0.000001
+2024-07-08 12:53:49,076 P598115 INFO ********* Epoch==7 early stop *********
+2024-07-08 12:53:49,194 P598115 INFO Training finished.
+2024-07-08 12:53:49,195 P598115 INFO Load best model: /mnt/public/lhh/code/model_zoo/DCNv3/DCNv3_torch/checkpoints/KDD12_x10/DCNv3_KDD12_002_91d2a219.model
+2024-07-08 12:53:49,368 P598115 INFO ****** Validation evaluation ******
+2024-07-08 12:54:15,921 P598115 INFO ===
+2024-07-08 12:54:15,922 P598115 INFO [Metrics] logloss: 0.150229 - AUC: 0.806843
+2024-07-08 12:54:15,995 P598115 INFO ******** Test evaluation ********
+2024-07-08 12:54:15,995 P598115 INFO Loading data...
+2024-07-08 12:54:15,995 P598115 INFO Loading data from h5: ../../../data/KDD12_x10/test.h5
+2024-07-08 12:54:18,916 P598115 INFO Test samples: total/14137104, blocks/1
+2024-07-08 12:54:18,916 P598115 INFO Loading test data done.
+2024-07-08 12:54:45,639 P598115 INFO ===
+2024-07-08 12:54:45,640 P598115 INFO [Metrics] logloss: 0.149968 - AUC: 0.807216

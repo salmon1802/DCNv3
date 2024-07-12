@@ -1,0 +1,216 @@
+2024-07-01 14:28:52,458 P2790147 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "4096",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "ML_1M_7_x1",
+    "debug_mode": "False",
+    "deep_net_dropout": "0.2",
+    "early_stop_patience": "2",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['UserID', 'Gender', 'Age', 'Occupation', 'MovieID', 'Release'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 5, 'name': 'Genres', 'splitter': '^', 'type': 'sequence'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "2",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'Label'}",
+    "layer_norm": "True",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "1",
+    "model": "SDCNv3",
+    "model_id": "SDCNv3_ML_1M_103_2b0b15a4",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_deep_cross_layers": "3",
+    "num_heads": "1",
+    "num_shallow_cross_layers": "4",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2024",
+    "shallow_net_dropout": "0.1",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/ML_1M/test.csv",
+    "train_data": "../../../data/ML_1M/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/ML_1M/valid.csv",
+    "verbose": "1"
+}
+2024-07-01 14:28:52,459 P2790147 INFO Set up feature processor...
+2024-07-01 14:28:52,459 P2790147 WARNING Skip rebuilding ../../../data/ML_1M_7_x1/feature_map.json. Please delete it manually if rebuilding is required.
+2024-07-01 14:28:52,459 P2790147 INFO Load feature_map from json: ../../../data/ML_1M_7_x1/feature_map.json
+2024-07-01 14:28:52,459 P2790147 INFO Set column index...
+2024-07-01 14:28:52,460 P2790147 INFO Feature specs: {
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "Genres": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 19, 'vocab_size': 20, 'max_len': 5}",
+    "MovieID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3642, 'vocab_size': 3643}",
+    "Occupation": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "Release": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6041, 'vocab_size': 6042}"
+}
+2024-07-01 14:29:00,073 P2790147 INFO Total number of parameters: 201728.
+2024-07-01 14:29:00,073 P2790147 INFO Loading data...
+2024-07-01 14:29:00,073 P2790147 INFO Loading data from h5: ../../../data/ML_1M_7_x1/train.h5
+2024-07-01 14:29:00,235 P2790147 INFO Train samples: total/591209, blocks/1
+2024-07-01 14:29:00,235 P2790147 INFO Loading data from h5: ../../../data/ML_1M_7_x1/valid.h5
+2024-07-01 14:29:00,243 P2790147 INFO Validation samples: total/73901, blocks/1
+2024-07-01 14:29:00,243 P2790147 INFO Loading train and validation data done.
+2024-07-01 14:29:00,243 P2790147 INFO Start training: 145 batches/epoch
+2024-07-01 14:29:00,243 P2790147 INFO ************ Epoch=1 start ************
+2024-07-01 14:29:17,972 P2790147 INFO Train loss: 0.445128
+2024-07-01 14:29:17,972 P2790147 INFO Evaluation @epoch 1 - batch 145: 
+2024-07-01 14:29:20,696 P2790147 INFO ===
+2024-07-01 14:29:20,697 P2790147 INFO [Metrics] AUC: 0.864285 - logloss: 0.352915
+2024-07-01 14:29:20,698 P2790147 INFO Save best model: monitor(max)=0.864285
+2024-07-01 14:29:20,866 P2790147 INFO ************ Epoch=1 end ************
+2024-07-01 14:29:39,343 P2790147 INFO Train loss: 0.387143
+2024-07-01 14:29:39,344 P2790147 INFO Evaluation @epoch 2 - batch 145: 
+2024-07-01 14:29:42,018 P2790147 INFO ===
+2024-07-01 14:29:42,019 P2790147 INFO [Metrics] AUC: 0.872277 - logloss: 0.344370
+2024-07-01 14:29:42,019 P2790147 INFO Save best model: monitor(max)=0.872277
+2024-07-01 14:29:42,283 P2790147 INFO ************ Epoch=2 end ************
+2024-07-01 14:30:02,350 P2790147 INFO Train loss: 0.376805
+2024-07-01 14:30:02,351 P2790147 INFO Evaluation @epoch 3 - batch 145: 
+2024-07-01 14:30:05,215 P2790147 INFO ===
+2024-07-01 14:30:05,216 P2790147 INFO [Metrics] AUC: 0.877383 - logloss: 0.337452
+2024-07-01 14:30:05,216 P2790147 INFO Save best model: monitor(max)=0.877383
+2024-07-01 14:30:05,805 P2790147 INFO ************ Epoch=3 end ************
+2024-07-01 14:30:25,875 P2790147 INFO Train loss: 0.370591
+2024-07-01 14:30:25,875 P2790147 INFO Evaluation @epoch 4 - batch 145: 
+2024-07-01 14:30:29,331 P2790147 INFO ===
+2024-07-01 14:30:29,332 P2790147 INFO [Metrics] AUC: 0.882591 - logloss: 0.330875
+2024-07-01 14:30:29,332 P2790147 INFO Save best model: monitor(max)=0.882591
+2024-07-01 14:30:29,680 P2790147 INFO ************ Epoch=4 end ************
+2024-07-01 14:30:50,272 P2790147 INFO Train loss: 0.366921
+2024-07-01 14:30:50,273 P2790147 INFO Evaluation @epoch 5 - batch 145: 
+2024-07-01 14:30:53,148 P2790147 INFO ===
+2024-07-01 14:30:53,148 P2790147 INFO [Metrics] AUC: 0.887292 - logloss: 0.325907
+2024-07-01 14:30:53,148 P2790147 INFO Save best model: monitor(max)=0.887292
+2024-07-01 14:30:53,337 P2790147 INFO ************ Epoch=5 end ************
+2024-07-01 14:31:13,751 P2790147 INFO Train loss: 0.363814
+2024-07-01 14:31:13,753 P2790147 INFO Evaluation @epoch 6 - batch 145: 
+2024-07-01 14:31:16,961 P2790147 INFO ===
+2024-07-01 14:31:16,962 P2790147 INFO [Metrics] AUC: 0.889741 - logloss: 0.322596
+2024-07-01 14:31:16,962 P2790147 INFO Save best model: monitor(max)=0.889741
+2024-07-01 14:31:17,231 P2790147 INFO ************ Epoch=6 end ************
+2024-07-01 14:31:35,568 P2790147 INFO Train loss: 0.360631
+2024-07-01 14:31:35,569 P2790147 INFO Evaluation @epoch 7 - batch 145: 
+2024-07-01 14:31:38,685 P2790147 INFO ===
+2024-07-01 14:31:38,685 P2790147 INFO [Metrics] AUC: 0.891582 - logloss: 0.320446
+2024-07-01 14:31:38,685 P2790147 INFO Save best model: monitor(max)=0.891582
+2024-07-01 14:31:39,068 P2790147 INFO ************ Epoch=7 end ************
+2024-07-01 14:31:58,785 P2790147 INFO Train loss: 0.358598
+2024-07-01 14:31:58,785 P2790147 INFO Evaluation @epoch 8 - batch 145: 
+2024-07-01 14:32:02,282 P2790147 INFO ===
+2024-07-01 14:32:02,285 P2790147 INFO [Metrics] AUC: 0.893920 - logloss: 0.317270
+2024-07-01 14:32:02,286 P2790147 INFO Save best model: monitor(max)=0.893920
+2024-07-01 14:32:02,606 P2790147 INFO ************ Epoch=8 end ************
+2024-07-01 14:32:21,187 P2790147 INFO Train loss: 0.356174
+2024-07-01 14:32:21,188 P2790147 INFO Evaluation @epoch 9 - batch 145: 
+2024-07-01 14:32:23,918 P2790147 INFO ===
+2024-07-01 14:32:23,918 P2790147 INFO [Metrics] AUC: 0.895040 - logloss: 0.315524
+2024-07-01 14:32:23,918 P2790147 INFO Save best model: monitor(max)=0.895040
+2024-07-01 14:32:24,150 P2790147 INFO ************ Epoch=9 end ************
+2024-07-01 14:32:43,009 P2790147 INFO Train loss: 0.354307
+2024-07-01 14:32:43,013 P2790147 INFO Evaluation @epoch 10 - batch 145: 
+2024-07-01 14:32:46,226 P2790147 INFO ===
+2024-07-01 14:32:46,227 P2790147 INFO [Metrics] AUC: 0.895624 - logloss: 0.315279
+2024-07-01 14:32:46,227 P2790147 INFO Save best model: monitor(max)=0.895624
+2024-07-01 14:32:46,491 P2790147 INFO ************ Epoch=10 end ************
+2024-07-01 14:33:03,339 P2790147 INFO Train loss: 0.353342
+2024-07-01 14:33:03,339 P2790147 INFO Evaluation @epoch 11 - batch 145: 
+2024-07-01 14:33:05,557 P2790147 INFO ===
+2024-07-01 14:33:05,557 P2790147 INFO [Metrics] AUC: 0.895687 - logloss: 0.313956
+2024-07-01 14:33:05,557 P2790147 INFO Save best model: monitor(max)=0.895687
+2024-07-01 14:33:05,702 P2790147 INFO ************ Epoch=11 end ************
+2024-07-01 14:33:21,963 P2790147 INFO Train loss: 0.351910
+2024-07-01 14:33:21,969 P2790147 INFO Evaluation @epoch 12 - batch 145: 
+2024-07-01 14:33:23,858 P2790147 INFO ===
+2024-07-01 14:33:23,859 P2790147 INFO [Metrics] AUC: 0.896401 - logloss: 0.313496
+2024-07-01 14:33:23,859 P2790147 INFO Save best model: monitor(max)=0.896401
+2024-07-01 14:33:24,044 P2790147 INFO ************ Epoch=12 end ************
+2024-07-01 14:33:39,990 P2790147 INFO Train loss: 0.350861
+2024-07-01 14:33:39,991 P2790147 INFO Evaluation @epoch 13 - batch 145: 
+2024-07-01 14:33:42,564 P2790147 INFO ===
+2024-07-01 14:33:42,564 P2790147 INFO [Metrics] AUC: 0.897252 - logloss: 0.312360
+2024-07-01 14:33:42,564 P2790147 INFO Save best model: monitor(max)=0.897252
+2024-07-01 14:33:42,845 P2790147 INFO ************ Epoch=13 end ************
+2024-07-01 14:33:57,603 P2790147 INFO Train loss: 0.350153
+2024-07-01 14:33:57,603 P2790147 INFO Evaluation @epoch 14 - batch 145: 
+2024-07-01 14:33:59,517 P2790147 INFO ===
+2024-07-01 14:33:59,517 P2790147 INFO [Metrics] AUC: 0.897439 - logloss: 0.311816
+2024-07-01 14:33:59,517 P2790147 INFO Save best model: monitor(max)=0.897439
+2024-07-01 14:33:59,718 P2790147 INFO ************ Epoch=14 end ************
+2024-07-01 14:34:16,032 P2790147 INFO Train loss: 0.349278
+2024-07-01 14:34:16,032 P2790147 INFO Evaluation @epoch 15 - batch 145: 
+2024-07-01 14:34:18,479 P2790147 INFO ===
+2024-07-01 14:34:18,480 P2790147 INFO [Metrics] AUC: 0.898320 - logloss: 0.310936
+2024-07-01 14:34:18,480 P2790147 INFO Save best model: monitor(max)=0.898320
+2024-07-01 14:34:18,817 P2790147 INFO ************ Epoch=15 end ************
+2024-07-01 14:34:35,230 P2790147 INFO Train loss: 0.348284
+2024-07-01 14:34:35,230 P2790147 INFO Evaluation @epoch 16 - batch 145: 
+2024-07-01 14:34:37,634 P2790147 INFO ===
+2024-07-01 14:34:37,634 P2790147 INFO [Metrics] AUC: 0.898828 - logloss: 0.310028
+2024-07-01 14:34:37,634 P2790147 INFO Save best model: monitor(max)=0.898828
+2024-07-01 14:34:38,205 P2790147 INFO ************ Epoch=16 end ************
+2024-07-01 14:34:53,515 P2790147 INFO Train loss: 0.347453
+2024-07-01 14:34:53,515 P2790147 INFO Evaluation @epoch 17 - batch 145: 
+2024-07-01 14:34:56,307 P2790147 INFO ===
+2024-07-01 14:34:56,307 P2790147 INFO [Metrics] AUC: 0.898298 - logloss: 0.310390
+2024-07-01 14:34:56,307 P2790147 INFO Monitor(max)=0.898298 STOP!
+2024-07-01 14:34:56,307 P2790147 INFO Reduce learning rate on plateau: 0.000100
+2024-07-01 14:34:56,595 P2790147 INFO ************ Epoch=17 end ************
+2024-07-01 14:35:11,711 P2790147 INFO Train loss: 0.311838
+2024-07-01 14:35:11,712 P2790147 INFO Evaluation @epoch 18 - batch 145: 
+2024-07-01 14:35:13,712 P2790147 INFO ===
+2024-07-01 14:35:13,713 P2790147 INFO [Metrics] AUC: 0.903859 - logloss: 0.303736
+2024-07-01 14:35:13,713 P2790147 INFO Save best model: monitor(max)=0.903859
+2024-07-01 14:35:13,930 P2790147 INFO ************ Epoch=18 end ************
+2024-07-01 14:35:27,180 P2790147 INFO Train loss: 0.295165
+2024-07-01 14:35:27,181 P2790147 INFO Evaluation @epoch 19 - batch 145: 
+2024-07-01 14:35:29,008 P2790147 INFO ===
+2024-07-01 14:35:29,008 P2790147 INFO [Metrics] AUC: 0.905766 - logloss: 0.301921
+2024-07-01 14:35:29,008 P2790147 INFO Save best model: monitor(max)=0.905766
+2024-07-01 14:35:29,162 P2790147 INFO ************ Epoch=19 end ************
+2024-07-01 14:35:42,677 P2790147 INFO Train loss: 0.285889
+2024-07-01 14:35:42,683 P2790147 INFO Evaluation @epoch 20 - batch 145: 
+2024-07-01 14:35:44,634 P2790147 INFO ===
+2024-07-01 14:35:44,635 P2790147 INFO [Metrics] AUC: 0.906258 - logloss: 0.302089
+2024-07-01 14:35:44,635 P2790147 INFO Save best model: monitor(max)=0.906258
+2024-07-01 14:35:44,818 P2790147 INFO ************ Epoch=20 end ************
+2024-07-01 14:35:55,980 P2790147 INFO Train loss: 0.279713
+2024-07-01 14:35:55,980 P2790147 INFO Evaluation @epoch 21 - batch 145: 
+2024-07-01 14:35:57,676 P2790147 INFO ===
+2024-07-01 14:35:57,676 P2790147 INFO [Metrics] AUC: 0.906238 - logloss: 0.303263
+2024-07-01 14:35:57,676 P2790147 INFO Monitor(max)=0.906238 STOP!
+2024-07-01 14:35:57,676 P2790147 INFO Reduce learning rate on plateau: 0.000010
+2024-07-01 14:35:57,799 P2790147 INFO ************ Epoch=21 end ************
+2024-07-01 14:36:07,189 P2790147 INFO Train loss: 0.265425
+2024-07-01 14:36:07,189 P2790147 INFO Evaluation @epoch 22 - batch 145: 
+2024-07-01 14:36:08,438 P2790147 INFO ===
+2024-07-01 14:36:08,438 P2790147 INFO [Metrics] AUC: 0.905923 - logloss: 0.304876
+2024-07-01 14:36:08,438 P2790147 INFO Monitor(max)=0.905923 STOP!
+2024-07-01 14:36:08,439 P2790147 INFO Reduce learning rate on plateau: 0.000001
+2024-07-01 14:36:08,439 P2790147 INFO ********* Epoch==22 early stop *********
+2024-07-01 14:36:08,632 P2790147 INFO Training finished.
+2024-07-01 14:36:08,632 P2790147 INFO Load best model: /mnt/public/lhh/code/model_zoo/DCNv3/DCNv3_torch/checkpoints/ML_1M_7_x1/SDCNv3_ML_1M_103_2b0b15a4.model
+2024-07-01 14:36:08,659 P2790147 INFO ****** Validation evaluation ******
+2024-07-01 14:36:09,760 P2790147 INFO ===
+2024-07-01 14:36:09,760 P2790147 INFO [Metrics] logloss: 0.302089 - AUC: 0.906258
+2024-07-01 14:36:09,834 P2790147 INFO ******** Test evaluation ********
+2024-07-01 14:36:09,834 P2790147 INFO Loading data...
+2024-07-01 14:36:09,834 P2790147 INFO Loading data from h5: ../../../data/ML_1M_7_x1/test.h5
+2024-07-01 14:36:09,843 P2790147 INFO Test samples: total/73902, blocks/1
+2024-07-01 14:36:09,843 P2790147 INFO Loading test data done.
+2024-07-01 14:36:11,247 P2790147 INFO ===
+2024-07-01 14:36:11,247 P2790147 INFO [Metrics] logloss: 0.300186 - AUC: 0.907456

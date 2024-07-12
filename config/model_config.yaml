@@ -1,0 +1,304 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 8
+    verbose: 1
+    early_stop_patience: 2
+    pickle_feature_encoder: True
+    save_best_only: True
+    eval_steps: null
+    debug_mode: False
+    group_id: null
+    use_features: null
+    feature_specs: null
+    feature_config: null
+
+DCNv3_Avazu:
+    model: DCNv3
+    dataset_id: Avazu_x4_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    num_cross_layers: 4
+    net_dropout: 0
+    num_heads: 3
+    layer_norm: True
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_Avazu:
+    model: SDCNv3
+    dataset_id: Avazu_x4_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    num_deep_cross_layers: 4
+    num_shallow_cross_layers: 5
+    deep_net_dropout: 0
+    shallow_net_dropout: 0
+    layer_norm: True
+    batch_norm: True
+    num_heads: 4
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+DCNv3_Criteo: # This is a config template
+    model: DCNv3
+    dataset_id: Criteo_x4_10_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-5
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_cross_layers: 4
+    net_dropout: 0.1
+    num_heads: 1
+    layer_norm: True
+    batch_norm: False
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_Criteo:
+    model: SDCNv3
+    dataset_id: Criteo_x4_10_h5
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-5
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_deep_cross_layers: 3
+    num_shallow_cross_layers: 4
+    deep_net_dropout: 0.1
+    shallow_net_dropout: 0.2
+    layer_norm: True
+    batch_norm: False
+    num_heads: 1
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+DCNv3_ML_1M: # This is a config template
+    model: DCNv3
+    dataset_id: ML_1M_7_x1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 0.01
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_cross_layers: 4
+    net_dropout: 0.1
+    num_heads: 1
+    layer_norm: True
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_ML_1M:
+    model: SDCNv3
+    dataset_id: ML_1M_7_x1
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 0.01
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_deep_cross_layers: 3
+    num_shallow_cross_layers: 2
+    deep_net_dropout: 0.1
+    shallow_net_dropout: 0.1
+    layer_norm: True
+    batch_norm: True
+    num_heads: 1
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    num_workers: 4
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+DCNv3_iPinYou_x1: # This is a config template
+    model: DCNv3
+    dataset_id: iPinYou_x1_csv
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-3
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_cross_layers: 4
+    net_dropout: 0.1
+    num_heads: 1
+    layer_norm: True
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_iPinYou_x1:
+    model: SDCNv3
+    dataset_id: iPinYou_x1_csv
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-3
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 16
+    num_deep_cross_layers: 3
+    num_shallow_cross_layers: 4
+    deep_net_dropout: 0.1
+    shallow_net_dropout: 0.2
+    layer_norm: True
+    batch_norm: True
+    num_heads: 1
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    num_workers: 4
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+DCNv3_KKBox_x10: # This is a config template
+    model: DCNv3
+    dataset_id: KKBox_csv
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-4
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 128
+    num_cross_layers: 3
+    net_dropout: 0.2
+    num_heads: 1
+    layer_norm: True
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_KKBox_x10:
+    model: SDCNv3
+    dataset_id: KKBox_csv
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 5.e-4
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 128
+    num_deep_cross_layers: 3
+    num_shallow_cross_layers: 4
+    deep_net_dropout: 0.1
+    shallow_net_dropout: 0.2
+    layer_norm: True
+    batch_norm: True
+    num_heads: 1
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    num_workers: 4
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+DCNv3_KDD12: # This is a config template
+    model: DCNv3
+    dataset_id: KDD12_x10
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-5
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    num_cross_layers: 4
+    net_dropout: 0
+    num_heads: 1
+    layer_norm: True
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'
+
+SDCNv3_KDD12:
+    model: SDCNv3
+    dataset_id: KDD12_x10
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-5
+    net_regularizer: 0
+    batch_size: 10000
+    embedding_dim: 16
+    num_deep_cross_layers: 3
+    num_shallow_cross_layers: 4
+    deep_net_dropout: 0
+    shallow_net_dropout: 0
+    layer_norm: True
+    batch_norm: True
+    num_heads: 1
+    epochs: 100
+    shuffle: True
+    seed: 2024
+    monitor: {'AUC': 1, 'logloss': 0}
+    monitor_mode: 'max'

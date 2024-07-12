@@ -1,0 +1,282 @@
+2024-07-02 10:21:31,574 P3145294 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "KKBox_csv",
+    "debug_mode": "False",
+    "deep_net_dropout": "0.1",
+    "early_stop_patience": "2",
+    "embedding_dim": "128",
+    "embedding_regularizer": "0.0005",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['msno', 'song_id', 'source_system_tab', 'source_screen_name', 'source_type', 'city', 'gender', 'registered_via', 'language'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 3, 'name': 'genre_ids', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 3, 'name': 'artist_name', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'isrc', 'preprocess': 'extract_country_code', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'bd', 'preprocess': 'bucketize_age', 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "layer_norm": "True",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "model": "SDCNv3",
+    "model_id": "SDCNv3_KKBox_x10_102_6e81b2b1",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_deep_cross_layers": "5",
+    "num_heads": "1",
+    "num_shallow_cross_layers": "5",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2024",
+    "shallow_net_dropout": "0.3",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KKBox_x1/test.csv",
+    "train_data": "../../../data/KKBox_x1/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/KKBox_x1/valid.csv",
+    "verbose": "1"
+}
+2024-07-02 10:21:31,574 P3145294 INFO Set up feature processor...
+2024-07-02 10:21:31,575 P3145294 WARNING Skip rebuilding ../../../data/KKBox_csv/feature_map.json. Please delete it manually if rebuilding is required.
+2024-07-02 10:21:31,575 P3145294 INFO Load feature_map from json: ../../../data/KKBox_csv/feature_map.json
+2024-07-02 10:21:31,575 P3145294 INFO Set column index...
+2024-07-02 10:21:31,575 P3145294 INFO Feature specs: {
+    "artist_name": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 11975, 'vocab_size': 11976, 'max_len': 3}",
+    "bd": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "genre_ids": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 345, 'vocab_size': 346, 'max_len': 3}",
+    "isrc": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 79, 'vocab_size': 80}",
+    "language": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 11, 'vocab_size': 12}",
+    "msno": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25962, 'vocab_size': 25963}",
+    "registered_via": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "song_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 53290, 'vocab_size': 53291}",
+    "source_screen_name": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 20, 'vocab_size': 21}",
+    "source_system_tab": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "source_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 13, 'vocab_size': 14}"
+}
+2024-07-02 10:21:36,123 P3145294 INFO Total number of parameters: 25625878.
+2024-07-02 10:21:36,123 P3145294 INFO Loading data...
+2024-07-02 10:21:36,124 P3145294 INFO Loading data from h5: ../../../data/KKBox_csv/train.h5
+2024-07-02 10:21:37,518 P3145294 INFO Train samples: total/5901932, blocks/1
+2024-07-02 10:21:37,518 P3145294 INFO Loading data from h5: ../../../data/KKBox_csv/valid.h5
+2024-07-02 10:21:37,689 P3145294 INFO Validation samples: total/737743, blocks/1
+2024-07-02 10:21:37,690 P3145294 INFO Loading train and validation data done.
+2024-07-02 10:21:37,690 P3145294 INFO Start training: 591 batches/epoch
+2024-07-02 10:21:37,690 P3145294 INFO ************ Epoch=1 start ************
+2024-07-02 10:23:02,327 P3145294 INFO Train loss: 0.604117
+2024-07-02 10:23:02,327 P3145294 INFO Evaluation @epoch 1 - batch 591: 
+2024-07-02 10:23:05,835 P3145294 INFO ===
+2024-07-02 10:23:05,835 P3145294 INFO [Metrics] AUC: 0.808195 - logloss: 0.532243
+2024-07-02 10:23:05,842 P3145294 INFO Save best model: monitor(max)=0.808195
+2024-07-02 10:23:06,218 P3145294 INFO ************ Epoch=1 end ************
+2024-07-02 10:24:30,721 P3145294 INFO Train loss: 0.579245
+2024-07-02 10:24:30,722 P3145294 INFO Evaluation @epoch 2 - batch 591: 
+2024-07-02 10:24:34,038 P3145294 INFO ===
+2024-07-02 10:24:34,038 P3145294 INFO [Metrics] AUC: 0.819785 - logloss: 0.518391
+2024-07-02 10:24:34,042 P3145294 INFO Save best model: monitor(max)=0.819785
+2024-07-02 10:24:34,825 P3145294 INFO ************ Epoch=2 end ************
+2024-07-02 10:25:59,342 P3145294 INFO Train loss: 0.572649
+2024-07-02 10:25:59,343 P3145294 INFO Evaluation @epoch 3 - batch 591: 
+2024-07-02 10:26:03,058 P3145294 INFO ===
+2024-07-02 10:26:03,058 P3145294 INFO [Metrics] AUC: 0.824788 - logloss: 0.512103
+2024-07-02 10:26:03,065 P3145294 INFO Save best model: monitor(max)=0.824788
+2024-07-02 10:26:03,865 P3145294 INFO ************ Epoch=3 end ************
+2024-07-02 10:27:28,106 P3145294 INFO Train loss: 0.568884
+2024-07-02 10:27:28,106 P3145294 INFO Evaluation @epoch 4 - batch 591: 
+2024-07-02 10:27:31,683 P3145294 INFO ===
+2024-07-02 10:27:31,683 P3145294 INFO [Metrics] AUC: 0.828053 - logloss: 0.508098
+2024-07-02 10:27:31,688 P3145294 INFO Save best model: monitor(max)=0.828053
+2024-07-02 10:27:32,474 P3145294 INFO ************ Epoch=4 end ************
+2024-07-02 10:28:56,941 P3145294 INFO Train loss: 0.566427
+2024-07-02 10:28:56,942 P3145294 INFO Evaluation @epoch 5 - batch 591: 
+2024-07-02 10:29:00,393 P3145294 INFO ===
+2024-07-02 10:29:00,393 P3145294 INFO [Metrics] AUC: 0.830693 - logloss: 0.504797
+2024-07-02 10:29:00,399 P3145294 INFO Save best model: monitor(max)=0.830693
+2024-07-02 10:29:01,192 P3145294 INFO ************ Epoch=5 end ************
+2024-07-02 10:30:25,484 P3145294 INFO Train loss: 0.564754
+2024-07-02 10:30:25,484 P3145294 INFO Evaluation @epoch 6 - batch 591: 
+2024-07-02 10:30:28,910 P3145294 INFO ===
+2024-07-02 10:30:28,911 P3145294 INFO [Metrics] AUC: 0.832708 - logloss: 0.502049
+2024-07-02 10:30:28,917 P3145294 INFO Save best model: monitor(max)=0.832708
+2024-07-02 10:30:29,676 P3145294 INFO ************ Epoch=6 end ************
+2024-07-02 10:31:54,130 P3145294 INFO Train loss: 0.563369
+2024-07-02 10:31:54,130 P3145294 INFO Evaluation @epoch 7 - batch 591: 
+2024-07-02 10:31:57,509 P3145294 INFO ===
+2024-07-02 10:31:57,509 P3145294 INFO [Metrics] AUC: 0.833445 - logloss: 0.501321
+2024-07-02 10:31:57,510 P3145294 INFO Save best model: monitor(max)=0.833445
+2024-07-02 10:31:58,204 P3145294 INFO ************ Epoch=7 end ************
+2024-07-02 10:33:22,526 P3145294 INFO Train loss: 0.562098
+2024-07-02 10:33:22,527 P3145294 INFO Evaluation @epoch 8 - batch 591: 
+2024-07-02 10:33:25,862 P3145294 INFO ===
+2024-07-02 10:33:25,862 P3145294 INFO [Metrics] AUC: 0.834810 - logloss: 0.499570
+2024-07-02 10:33:25,869 P3145294 INFO Save best model: monitor(max)=0.834810
+2024-07-02 10:33:26,604 P3145294 INFO ************ Epoch=8 end ************
+2024-07-02 10:34:51,444 P3145294 INFO Train loss: 0.561283
+2024-07-02 10:34:51,444 P3145294 INFO Evaluation @epoch 9 - batch 591: 
+2024-07-02 10:34:54,818 P3145294 INFO ===
+2024-07-02 10:34:54,819 P3145294 INFO [Metrics] AUC: 0.835876 - logloss: 0.498124
+2024-07-02 10:34:54,825 P3145294 INFO Save best model: monitor(max)=0.835876
+2024-07-02 10:34:55,640 P3145294 INFO ************ Epoch=9 end ************
+2024-07-02 10:36:20,095 P3145294 INFO Train loss: 0.560676
+2024-07-02 10:36:20,096 P3145294 INFO Evaluation @epoch 10 - batch 591: 
+2024-07-02 10:36:23,372 P3145294 INFO ===
+2024-07-02 10:36:23,373 P3145294 INFO [Metrics] AUC: 0.837177 - logloss: 0.496249
+2024-07-02 10:36:23,379 P3145294 INFO Save best model: monitor(max)=0.837177
+2024-07-02 10:36:24,146 P3145294 INFO ************ Epoch=10 end ************
+2024-07-02 10:37:48,399 P3145294 INFO Train loss: 0.559863
+2024-07-02 10:37:48,399 P3145294 INFO Evaluation @epoch 11 - batch 591: 
+2024-07-02 10:37:51,612 P3145294 INFO ===
+2024-07-02 10:37:51,612 P3145294 INFO [Metrics] AUC: 0.838286 - logloss: 0.494813
+2024-07-02 10:37:51,618 P3145294 INFO Save best model: monitor(max)=0.838286
+2024-07-02 10:37:52,382 P3145294 INFO ************ Epoch=11 end ************
+2024-07-02 10:39:16,299 P3145294 INFO Train loss: 0.559117
+2024-07-02 10:39:16,299 P3145294 INFO Evaluation @epoch 12 - batch 591: 
+2024-07-02 10:39:19,542 P3145294 INFO ===
+2024-07-02 10:39:19,542 P3145294 INFO [Metrics] AUC: 0.838717 - logloss: 0.494481
+2024-07-02 10:39:19,548 P3145294 INFO Save best model: monitor(max)=0.838717
+2024-07-02 10:39:20,368 P3145294 INFO ************ Epoch=12 end ************
+2024-07-02 10:40:44,541 P3145294 INFO Train loss: 0.558544
+2024-07-02 10:40:44,542 P3145294 INFO Evaluation @epoch 13 - batch 591: 
+2024-07-02 10:40:47,839 P3145294 INFO ===
+2024-07-02 10:40:47,840 P3145294 INFO [Metrics] AUC: 0.839144 - logloss: 0.493710
+2024-07-02 10:40:47,847 P3145294 INFO Save best model: monitor(max)=0.839144
+2024-07-02 10:40:48,612 P3145294 INFO ************ Epoch=13 end ************
+2024-07-02 10:42:13,146 P3145294 INFO Train loss: 0.557680
+2024-07-02 10:42:13,147 P3145294 INFO Evaluation @epoch 14 - batch 591: 
+2024-07-02 10:42:16,415 P3145294 INFO ===
+2024-07-02 10:42:16,415 P3145294 INFO [Metrics] AUC: 0.840090 - logloss: 0.492619
+2024-07-02 10:42:16,420 P3145294 INFO Save best model: monitor(max)=0.840090
+2024-07-02 10:42:17,191 P3145294 INFO ************ Epoch=14 end ************
+2024-07-02 10:43:41,863 P3145294 INFO Train loss: 0.558764
+2024-07-02 10:43:41,863 P3145294 INFO Evaluation @epoch 15 - batch 591: 
+2024-07-02 10:43:45,103 P3145294 INFO ===
+2024-07-02 10:43:45,103 P3145294 INFO [Metrics] AUC: 0.840597 - logloss: 0.492202
+2024-07-02 10:43:45,104 P3145294 INFO Save best model: monitor(max)=0.840597
+2024-07-02 10:43:45,839 P3145294 INFO ************ Epoch=15 end ************
+2024-07-02 10:45:11,356 P3145294 INFO Train loss: 0.557321
+2024-07-02 10:45:11,357 P3145294 INFO Evaluation @epoch 16 - batch 591: 
+2024-07-02 10:45:14,645 P3145294 INFO ===
+2024-07-02 10:45:14,645 P3145294 INFO [Metrics] AUC: 0.840950 - logloss: 0.491226
+2024-07-02 10:45:14,651 P3145294 INFO Save best model: monitor(max)=0.840950
+2024-07-02 10:45:15,396 P3145294 INFO ************ Epoch=16 end ************
+2024-07-02 10:46:40,079 P3145294 INFO Train loss: 0.556274
+2024-07-02 10:46:40,079 P3145294 INFO Evaluation @epoch 17 - batch 591: 
+2024-07-02 10:46:43,342 P3145294 INFO ===
+2024-07-02 10:46:43,342 P3145294 INFO [Metrics] AUC: 0.841452 - logloss: 0.490658
+2024-07-02 10:46:43,348 P3145294 INFO Save best model: monitor(max)=0.841452
+2024-07-02 10:46:44,122 P3145294 INFO ************ Epoch=17 end ************
+2024-07-02 10:48:09,890 P3145294 INFO Train loss: 0.556194
+2024-07-02 10:48:09,890 P3145294 INFO Evaluation @epoch 18 - batch 591: 
+2024-07-02 10:48:13,190 P3145294 INFO ===
+2024-07-02 10:48:13,191 P3145294 INFO [Metrics] AUC: 0.841802 - logloss: 0.490199
+2024-07-02 10:48:13,197 P3145294 INFO Save best model: monitor(max)=0.841802
+2024-07-02 10:48:14,003 P3145294 INFO ************ Epoch=18 end ************
+2024-07-02 10:49:38,415 P3145294 INFO Train loss: 0.555263
+2024-07-02 10:49:38,415 P3145294 INFO Evaluation @epoch 19 - batch 591: 
+2024-07-02 10:49:41,634 P3145294 INFO ===
+2024-07-02 10:49:41,634 P3145294 INFO [Metrics] AUC: 0.842364 - logloss: 0.489467
+2024-07-02 10:49:41,640 P3145294 INFO Save best model: monitor(max)=0.842364
+2024-07-02 10:49:42,426 P3145294 INFO ************ Epoch=19 end ************
+2024-07-02 10:51:07,234 P3145294 INFO Train loss: 0.554575
+2024-07-02 10:51:07,234 P3145294 INFO Evaluation @epoch 20 - batch 591: 
+2024-07-02 10:51:10,561 P3145294 INFO ===
+2024-07-02 10:51:10,562 P3145294 INFO [Metrics] AUC: 0.842814 - logloss: 0.488877
+2024-07-02 10:51:10,567 P3145294 INFO Save best model: monitor(max)=0.842814
+2024-07-02 10:51:11,337 P3145294 INFO ************ Epoch=20 end ************
+2024-07-02 10:52:35,644 P3145294 INFO Train loss: 0.554069
+2024-07-02 10:52:35,644 P3145294 INFO Evaluation @epoch 21 - batch 591: 
+2024-07-02 10:52:38,912 P3145294 INFO ===
+2024-07-02 10:52:38,912 P3145294 INFO [Metrics] AUC: 0.843011 - logloss: 0.488762
+2024-07-02 10:52:38,916 P3145294 INFO Save best model: monitor(max)=0.843011
+2024-07-02 10:52:39,693 P3145294 INFO ************ Epoch=21 end ************
+2024-07-02 10:54:03,727 P3145294 INFO Train loss: 0.553546
+2024-07-02 10:54:03,728 P3145294 INFO Evaluation @epoch 22 - batch 591: 
+2024-07-02 10:54:07,005 P3145294 INFO ===
+2024-07-02 10:54:07,005 P3145294 INFO [Metrics] AUC: 0.843177 - logloss: 0.488375
+2024-07-02 10:54:07,010 P3145294 INFO Save best model: monitor(max)=0.843177
+2024-07-02 10:54:07,835 P3145294 INFO ************ Epoch=22 end ************
+2024-07-02 10:55:31,791 P3145294 INFO Train loss: 0.553030
+2024-07-02 10:55:31,792 P3145294 INFO Evaluation @epoch 23 - batch 591: 
+2024-07-02 10:55:35,004 P3145294 INFO ===
+2024-07-02 10:55:35,004 P3145294 INFO [Metrics] AUC: 0.843536 - logloss: 0.487858
+2024-07-02 10:55:35,012 P3145294 INFO Save best model: monitor(max)=0.843536
+2024-07-02 10:55:35,801 P3145294 INFO ************ Epoch=23 end ************
+2024-07-02 10:56:59,881 P3145294 INFO Train loss: 0.552566
+2024-07-02 10:56:59,881 P3145294 INFO Evaluation @epoch 24 - batch 591: 
+2024-07-02 10:57:03,030 P3145294 INFO ===
+2024-07-02 10:57:03,030 P3145294 INFO [Metrics] AUC: 0.843879 - logloss: 0.487555
+2024-07-02 10:57:03,036 P3145294 INFO Save best model: monitor(max)=0.843879
+2024-07-02 10:57:03,812 P3145294 INFO ************ Epoch=24 end ************
+2024-07-02 10:58:28,756 P3145294 INFO Train loss: 0.552142
+2024-07-02 10:58:28,757 P3145294 INFO Evaluation @epoch 25 - batch 591: 
+2024-07-02 10:58:31,962 P3145294 INFO ===
+2024-07-02 10:58:31,962 P3145294 INFO [Metrics] AUC: 0.844229 - logloss: 0.487085
+2024-07-02 10:58:31,968 P3145294 INFO Save best model: monitor(max)=0.844229
+2024-07-02 10:58:32,734 P3145294 INFO ************ Epoch=25 end ************
+2024-07-02 10:59:57,183 P3145294 INFO Train loss: 0.551711
+2024-07-02 10:59:57,183 P3145294 INFO Evaluation @epoch 26 - batch 591: 
+2024-07-02 11:00:00,512 P3145294 INFO ===
+2024-07-02 11:00:00,512 P3145294 INFO [Metrics] AUC: 0.844892 - logloss: 0.486282
+2024-07-02 11:00:00,518 P3145294 INFO Save best model: monitor(max)=0.844892
+2024-07-02 11:00:01,317 P3145294 INFO ************ Epoch=26 end ************
+2024-07-02 11:01:26,439 P3145294 INFO Train loss: 0.551503
+2024-07-02 11:01:26,439 P3145294 INFO Evaluation @epoch 27 - batch 591: 
+2024-07-02 11:01:29,784 P3145294 INFO ===
+2024-07-02 11:01:29,784 P3145294 INFO [Metrics] AUC: 0.844359 - logloss: 0.486982
+2024-07-02 11:01:29,789 P3145294 INFO Monitor(max)=0.844359 STOP!
+2024-07-02 11:01:29,790 P3145294 INFO Reduce learning rate on plateau: 0.000100
+2024-07-02 11:01:29,939 P3145294 INFO ************ Epoch=27 end ************
+2024-07-02 11:02:54,755 P3145294 INFO Train loss: 0.488386
+2024-07-02 11:02:54,755 P3145294 INFO Evaluation @epoch 28 - batch 591: 
+2024-07-02 11:02:58,233 P3145294 INFO ===
+2024-07-02 11:02:58,233 P3145294 INFO [Metrics] AUC: 0.853860 - logloss: 0.477860
+2024-07-02 11:02:58,239 P3145294 INFO Save best model: monitor(max)=0.853860
+2024-07-02 11:02:59,039 P3145294 INFO ************ Epoch=28 end ************
+2024-07-02 11:04:24,158 P3145294 INFO Train loss: 0.457273
+2024-07-02 11:04:24,159 P3145294 INFO Evaluation @epoch 29 - batch 591: 
+2024-07-02 11:04:27,417 P3145294 INFO ===
+2024-07-02 11:04:27,418 P3145294 INFO [Metrics] AUC: 0.856010 - logloss: 0.477308
+2024-07-02 11:04:27,424 P3145294 INFO Save best model: monitor(max)=0.856010
+2024-07-02 11:04:28,200 P3145294 INFO ************ Epoch=29 end ************
+2024-07-02 11:05:52,876 P3145294 INFO Train loss: 0.443203
+2024-07-02 11:05:52,876 P3145294 INFO Evaluation @epoch 30 - batch 591: 
+2024-07-02 11:05:56,156 P3145294 INFO ===
+2024-07-02 11:05:56,157 P3145294 INFO [Metrics] AUC: 0.856027 - logloss: 0.478552
+2024-07-02 11:05:56,161 P3145294 INFO Save best model: monitor(max)=0.856027
+2024-07-02 11:05:56,968 P3145294 INFO ************ Epoch=30 end ************
+2024-07-02 11:07:22,234 P3145294 INFO Train loss: 0.433587
+2024-07-02 11:07:22,234 P3145294 INFO Evaluation @epoch 31 - batch 591: 
+2024-07-02 11:07:25,475 P3145294 INFO ===
+2024-07-02 11:07:25,475 P3145294 INFO [Metrics] AUC: 0.855872 - logloss: 0.481417
+2024-07-02 11:07:25,475 P3145294 INFO Monitor(max)=0.855872 STOP!
+2024-07-02 11:07:25,475 P3145294 INFO Reduce learning rate on plateau: 0.000010
+2024-07-02 11:07:25,610 P3145294 INFO ************ Epoch=31 end ************
+2024-07-02 11:08:50,349 P3145294 INFO Train loss: 0.406748
+2024-07-02 11:08:50,349 P3145294 INFO Evaluation @epoch 32 - batch 591: 
+2024-07-02 11:08:53,837 P3145294 INFO ===
+2024-07-02 11:08:53,838 P3145294 INFO [Metrics] AUC: 0.853950 - logloss: 0.498080
+2024-07-02 11:08:53,843 P3145294 INFO Monitor(max)=0.853950 STOP!
+2024-07-02 11:08:53,843 P3145294 INFO Reduce learning rate on plateau: 0.000001
+2024-07-02 11:08:53,843 P3145294 INFO ********* Epoch==32 early stop *********
+2024-07-02 11:08:53,974 P3145294 INFO Training finished.
+2024-07-02 11:08:53,974 P3145294 INFO Load best model: /mnt/public/lhh/code/model_zoo/DCNv3/DCNv3_torch/checkpoints/KKBox_csv/SDCNv3_KKBox_x10_102_6e81b2b1.model
+2024-07-02 11:08:54,110 P3145294 INFO ****** Validation evaluation ******
+2024-07-02 11:08:57,456 P3145294 INFO ===
+2024-07-02 11:08:57,457 P3145294 INFO [Metrics] logloss: 0.478552 - AUC: 0.856027
+2024-07-02 11:08:57,526 P3145294 INFO ******** Test evaluation ********
+2024-07-02 11:08:57,526 P3145294 INFO Loading data...
+2024-07-02 11:08:57,526 P3145294 INFO Loading data from h5: ../../../data/KKBox_csv/test.h5
+2024-07-02 11:08:57,762 P3145294 INFO Test samples: total/737743, blocks/1
+2024-07-02 11:08:57,762 P3145294 INFO Loading test data done.
+2024-07-02 11:09:01,033 P3145294 INFO ===
+2024-07-02 11:09:01,033 P3145294 INFO [Metrics] logloss: 0.478364 - AUC: 0.856015
