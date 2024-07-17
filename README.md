@@ -20,9 +20,7 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/salmon1802/TF4CTR/assets/73091798/843d3a50-938c-445f-82f4-25a3f56522c1)
-
-
+![image](https://github.com/user-attachments/assets/e0e8f621-5dcc-4bd8-974e-fcb7237f1096)
 
 
 ## Datasets
