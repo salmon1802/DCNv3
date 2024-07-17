@@ -21,6 +21,7 @@ tqdm
 
 ## Experiment results
 ![image](https://github.com/user-attachments/assets/e0e8f621-5dcc-4bd8-974e-fcb7237f1096)
+![image](https://github.com/user-attachments/assets/4a0f607d-3dd3-43f6-8294-ec48f76faf15)
 
 
 ## Datasets
