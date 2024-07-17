@@ -27,7 +27,7 @@ tqdm
 Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
-Get the result from https://github.com/salmon1802/TF4CTR/tree/main/TF4CTR/TF4CTR_torch/checkpoints
+Get the result from ./checkpoints
 
 ## Acknowledgement
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
