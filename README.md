@@ -45,14 +45,11 @@ FuxiCTR: https://github.com/xue-pai/FuxiCTR
 If you find our code helpful for your research, please cite the following paper:
 
 ```bibtex
-@misc{li2024dcnv3generationdeepcross,
-      title={DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction}, 
-      author={Honghao Li and Yiwen Zhang and Yi Zhang and Hanwei Li and Lei Sang},
-      year={2024},
-      eprint={2407.13349},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR},
-      url={https://arxiv.org/abs/2407.13349}, 
+@article{li2024dcnv3,
+  title={DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction},
+  author={Li, Honghao and Zhang, Yiwen and Zhang, Yi and Li, Hanwei and Sang, Lei},
+  journal={arXiv preprint arXiv:2407.13349},
+  year={2024}
 }
 ```
 
