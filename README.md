@@ -22,7 +22,7 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/user-attachments/assets/6c9c65de-77a3-4957-8b50-7f33021f5ef2)
+![image](https://github.com/user-attachments/assets/b7d1f216-5b7a-4e79-8662-2804d4135f13)
 ![image](https://github.com/user-attachments/assets/16de93b8-687b-4c51-b7d9-ccf11bb574c3)
 
 
