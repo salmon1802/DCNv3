@@ -7,11 +7,14 @@ If you have any questions, feel free to ask!  :)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dcnv3-towards-next-generation-deep-cross/click-through-rate-prediction-on-avazu)](https://paperswithcode.com/sota/click-through-rate-prediction-on-avazu?p=dcnv3-towards-next-generation-deep-cross)
 
 
-![image](https://github.com/user-attachments/assets/a3e24d5a-7cc4-442a-8b05-208af14e7dcc)
+![image](https://github.com/user-attachments/assets/c2431049-6121-49dc-b992-bce321f5d3f0)
+
 
 ## Model Overview
 ![image](https://github.com/user-attachments/assets/b41ebfdd-98dc-4a4e-abb2-f748d8d904e9)
-![image](https://github.com/user-attachments/assets/93dbe5c0-ef64-4fe4-9d32-21f68da205e9)
+
+![image](https://github.com/user-attachments/assets/b5338ecf-bc66-425a-ba6b-7722e90d6ab9)
+
 
 
 
@@ -28,7 +31,8 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/user-attachments/assets/bf627b21-c3aa-41e4-856b-7b91db8b3a8b)
+![image](https://github.com/user-attachments/assets/9cf312e0-33c0-4dff-b485-25acfd29dd46)
+
 ![image](https://github.com/user-attachments/assets/16de93b8-687b-4c51-b7d9-ccf11bb574c3)
 
 
