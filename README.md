@@ -8,9 +8,6 @@ If you have any questions, feel free to ask!  :)
 
 ![image](https://github.com/user-attachments/assets/258582ec-b720-4344-a0bc-9c3dc90d3cfc)
 
-
-
-
 ## Requirements
 python>=3.6  
 pytorch>=1.0  
@@ -25,7 +22,7 @@ tqdm
 ## Experiment results
 ![image](https://github.com/user-attachments/assets/9cf312e0-33c0-4dff-b485-25acfd29dd46)
 
-![image](https://github.com/user-attachments/assets/16de93b8-687b-4c51-b7d9-ccf11bb574c3)
+[EfficiencyComparisons.pdf](https://github.com/user-attachments/files/16467420/EfficiencyComparisons.pdf)
 
 
 ## Datasets
