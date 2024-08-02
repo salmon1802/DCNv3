@@ -1,11 +1,12 @@
 If you have any questions, feel free to ask!  :)
 # DCNv3: Towards Next Generation Deep Cross Network for Click-Through Rate Prediction
 
-![image](https://github.com/user-attachments/assets/a3e24d5a-7cc4-442a-8b05-208af14e7dcc)
+![image](https://github.com/user-attachments/assets/c2431049-6121-49dc-b992-bce321f5d3f0)
 
 ## Model Overview
 ![image](https://github.com/user-attachments/assets/b41ebfdd-98dc-4a4e-abb2-f748d8d904e9)
-![image](https://github.com/user-attachments/assets/93dbe5c0-ef64-4fe4-9d32-21f68da205e9)
+
+![image](https://github.com/user-attachments/assets/b5338ecf-bc66-425a-ba6b-7722e90d6ab9)
 
 
 
@@ -22,7 +23,8 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/user-attachments/assets/b7d1f216-5b7a-4e79-8662-2804d4135f13)
+![image](https://github.com/user-attachments/assets/9cf312e0-33c0-4dff-b485-25acfd29dd46)
+
 ![image](https://github.com/user-attachments/assets/16de93b8-687b-4c51-b7d9-ccf11bb574c3)
 
 
