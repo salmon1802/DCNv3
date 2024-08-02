@@ -13,7 +13,9 @@ If you have any questions, feel free to ask!  :)
 
 
 ## Model Overview
-![image](https://github.com/user-attachments/assets/9c6e9afb-b627-4a9b-a1e5-be840dae0ae6)
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/9c6e9afb-b627-4a9b-a1e5-be840dae0ae6" alt="SDCNv3" />
+</div>
 
 ![image](https://github.com/user-attachments/assets/f2072d26-7597-40db-a24d-9c8d07d92572)
 
