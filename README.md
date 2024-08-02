@@ -7,15 +7,16 @@ If you have any questions, feel free to ask!  :)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dcnv3-towards-next-generation-deep-cross/click-through-rate-prediction-on-avazu)](https://paperswithcode.com/sota/click-through-rate-prediction-on-avazu?p=dcnv3-towards-next-generation-deep-cross)
 
 
-![image](https://github.com/user-attachments/assets/197e8293-1abd-4e5f-b8c8-aa6c129b26cc)
+![image](https://github.com/user-attachments/assets/3d3c4543-566d-4ec3-aae0-2a57358352ff)
+
 
 
 
 ## Model Overview
-![image](https://github.com/user-attachments/assets/b253ab0a-5e3d-443f-bbed-fd4362de227d)
+![image](https://github.com/user-attachments/assets/9c6e9afb-b627-4a9b-a1e5-be840dae0ae6)
 
+![image](https://github.com/user-attachments/assets/f2072d26-7597-40db-a24d-9c8d07d92572)
 
-![image](https://github.com/user-attachments/assets/258582ec-b720-4344-a0bc-9c3dc90d3cfc)
 
 
 
@@ -36,9 +37,7 @@ tqdm
 ## Experiment results
 ![image](https://github.com/user-attachments/assets/9cf312e0-33c0-4dff-b485-25acfd29dd46)
 
-<div align="center">
-<img src="https://docs.qq.com/pdf/DZE9FaWpMckp3d2lv" width="600" alt="SDCNv3 model"/>
-</div>
+![image](https://github.com/user-attachments/assets/e99cec94-d59a-4355-8732-da99cba1fc10)
 
 
 ## Datasets
