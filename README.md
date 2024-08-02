@@ -36,7 +36,9 @@ tqdm
 ## Experiment results
 ![image](https://github.com/user-attachments/assets/9cf312e0-33c0-4dff-b485-25acfd29dd46)
 
-![image](https://github.com/user-attachments/assets/16de93b8-687b-4c51-b7d9-ccf11bb574c3)
+<div align="center">
+<img src="https://docs.qq.com/pdf/DZE9FaWpMckp3d2lv" width="600" alt="SDCNv3 model"/>
+</div>
 
 
 ## Datasets
