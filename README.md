@@ -10,11 +10,9 @@ If you have any questions, feel free to ask!  :)
 ![image](https://github.com/user-attachments/assets/3d3c4543-566d-4ec3-aae0-2a57358352ff)
 
 
-
-
 ## Model Overview
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/9c6e9afb-b627-4a9b-a1e5-be840dae0ae6" alt="SDCNv3" />
+    <img src="https://github.com/user-attachments/assets/6b0df396-d4ee-4475-ac02-21538ae0ef27" alt="SDCNv3" />
 </div>
 
 ![image](https://github.com/user-attachments/assets/f2072d26-7597-40db-a24d-9c8d07d92572)
