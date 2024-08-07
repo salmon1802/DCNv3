@@ -57,7 +57,7 @@ If you find our code helpful for your research, please cite the following paper:
 ```bibtex
 @article{li2024dcnv3,
   title={DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction},
-  author={Li, Honghao and Zhang, Yiwen and Zhang, Yi and Li, Hanwei and Sang, Lei},
+  author={Li, Honghao and Zhang, Yiwen and Zhang, Yi and Li, Hanwei and Sang, Lei and Zhu, Jieming},
   journal={arXiv preprint arXiv:2407.13349},
   year={2024}
 }
