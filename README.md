@@ -14,7 +14,9 @@ If you have any questions, feel free to ask!  :)
 <div align="center">
     <img src="https://github.com/user-attachments/assets/6f0479ce-edb2-4ad1-92a0-7ec9aeeb5f2d" alt="DCNv3" />
 </div>
-![image](https://github.com/user-attachments/assets/935f4bce-bcd2-428d-a5df-8afe76db18c0)
+
+![image](https://github.com/user-attachments/assets/97551bd5-17cf-4cc6-8598-1c55754288a6)
+
 
 
 
