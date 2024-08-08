@@ -12,8 +12,8 @@ Base:
     feature_specs: null
     feature_config: null
 
-DCNv3_Avazu:
-    model: DCNv3
+ECN_Avazu:
+    model: ECN
     dataset_id: Avazu_x4_h5
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -35,8 +35,8 @@ DCNv3_Avazu:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_Avazu:
-    model: SDCNv3
+DCNv3_Avazu:
+    model: DCNv3
     dataset_id: Avazu_x4_h5
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -60,8 +60,8 @@ SDCNv3_Avazu:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-DCNv3_Criteo: # This is a config template
-    model: DCNv3
+ECN_Criteo: # This is a config template
+    model: ECN
     dataset_id: Criteo_x4_10_h5
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -83,8 +83,8 @@ DCNv3_Criteo: # This is a config template
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_Criteo:
-    model: SDCNv3
+DCNv3_Criteo:
+    model: DCNv3
     dataset_id: Criteo_x4_10_h5
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -108,8 +108,8 @@ SDCNv3_Criteo:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-DCNv3_ML_1M: # This is a config template
-    model: DCNv3
+ECN_ML_1M: # This is a config template
+    model: ECN
     dataset_id: ML_1M_7_x1
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -131,8 +131,8 @@ DCNv3_ML_1M: # This is a config template
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_ML_1M:
-    model: SDCNv3
+DCNv3_ML_1M:
+    model: DCNv3
     dataset_id: ML_1M_7_x1
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -157,8 +157,8 @@ SDCNv3_ML_1M:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-DCNv3_iPinYou_x1: # This is a config template
-    model: DCNv3
+ECN_iPinYou_x1: # This is a config template
+    model: ECN
     dataset_id: iPinYou_x1_csv
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -180,8 +180,8 @@ DCNv3_iPinYou_x1: # This is a config template
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_iPinYou_x1:
-    model: SDCNv3
+DCNv3_iPinYou_x1:
+    model: DCNv3
     dataset_id: iPinYou_x1_csv
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -206,8 +206,8 @@ SDCNv3_iPinYou_x1:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-DCNv3_KKBox_x10: # This is a config template
-    model: DCNv3
+ECN_KKBox_x10: # This is a config template
+    model: ECN
     dataset_id: KKBox_csv
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -229,8 +229,8 @@ DCNv3_KKBox_x10: # This is a config template
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_KKBox_x10:
-    model: SDCNv3
+DCNv3_KKBox_x10:
+    model: DCNv3
     dataset_id: KKBox_csv
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -255,8 +255,8 @@ SDCNv3_KKBox_x10:
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-DCNv3_KDD12: # This is a config template
-    model: DCNv3
+ECN_KDD12: # This is a config template
+    model: ECN
     dataset_id: KDD12_x10
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
@@ -278,8 +278,8 @@ DCNv3_KDD12: # This is a config template
     monitor: {'AUC': 1, 'logloss': 0}
     monitor_mode: 'max'
 
-SDCNv3_KDD12:
-    model: SDCNv3
+DCNv3_KDD12:
+    model: DCNv3
     dataset_id: KDD12_x10
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']

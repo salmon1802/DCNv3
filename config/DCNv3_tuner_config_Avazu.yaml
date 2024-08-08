@@ -1,12 +1,11 @@
 base_config: ./config/
-base_expid: DCNv3_KDD12
-dataset_id: KDD12_x10
+base_expid: DCNv3_Avazu
+dataset_id: Avazu_x4_h5
 
 tuner_space:
     model_root: './checkpoints/'
     batch_size: 10000
-    embedding_regularizer: [1.e-6, 1.e-7]
     num_deep_cross_layers: [4]
     num_shallow_cross_layers: [3, 4, 5, 6]
-    deep_net_dropout: [0]
-    shallow_net_dropout: [0]
+
+

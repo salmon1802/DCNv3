@@ -1,0 +1,142 @@
+2024-07-08 11:28:46,284 P598114 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "KDD12_x10",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "16",
+    "embedding_regularizer": "1e-05",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['Depth', 'Position', 'Impression'], 'preprocess': 'convert_to_bucket', 'type': 'categorical'}, {'active': True, 'dtype': 'float', 'name': ['DisplayURL', 'AdID', 'AdvertiserID', 'QueryID', 'KeywordID', 'TitleID', 'DescriptionID', 'UserID', 'Gender', 'Age'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'Click'}",
+    "layer_norm": "True",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "model": "ECN",
+    "model_id": "ECN_KDD12_001_39a526f3",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_cross_layers": "7",
+    "num_heads": "1",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2024",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KDD12/test.csv",
+    "train_data": "../../../data/KDD12/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/KDD12/valid.csv",
+    "verbose": "1"
+}
+2024-07-08 11:28:46,285 P598114 INFO Set up feature processor...
+2024-07-08 11:28:46,285 P598114 WARNING Skip rebuilding ../../../data/KDD12_x10/feature_map.json. Please delete it manually if rebuilding is required.
+2024-07-08 11:28:46,285 P598114 INFO Load feature_map from json: ../../../data/KDD12_x10/feature_map.json
+2024-07-08 11:28:46,285 P598114 INFO Set column index...
+2024-07-08 11:28:46,285 P598114 INFO Feature specs: {
+    "AdID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 280097, 'vocab_size': 280098}",
+    "AdvertiserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 14416, 'vocab_size': 14417}",
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Depth": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "DescriptionID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 614455, 'vocab_size': 614456}",
+    "DisplayURL": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22591, 'vocab_size': 22592}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "Impression": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 90, 'vocab_size': 91}",
+    "KeywordID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 358326, 'vocab_size': 358327}",
+    "Position": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "QueryID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 997505, 'vocab_size': 997506}",
+    "TitleID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 762415, 'vocab_size': 762416}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1618170, 'vocab_size': 1618171}"
+}
+2024-07-08 11:28:50,471 P598114 INFO Total number of parameters: 74844095.
+2024-07-08 11:28:50,472 P598114 INFO Loading data...
+2024-07-08 11:28:50,472 P598114 INFO Loading data from h5: ../../../data/KDD12_x10/train.h5
+2024-07-08 11:29:17,778 P598114 INFO Train samples: total/113096830, blocks/1
+2024-07-08 11:29:17,778 P598114 INFO Loading data from h5: ../../../data/KDD12_x10/valid.h5
+2024-07-08 11:29:21,136 P598114 INFO Validation samples: total/14137104, blocks/1
+2024-07-08 11:29:21,137 P598114 INFO Loading train and validation data done.
+2024-07-08 11:29:21,137 P598114 INFO Start training: 11310 batches/epoch
+2024-07-08 11:29:21,137 P598114 INFO ************ Epoch=1 start ************
+2024-07-08 11:40:14,218 P598114 INFO Train loss: 0.168319
+2024-07-08 11:40:14,218 P598114 INFO Evaluation @epoch 1 - batch 11310: 
+2024-07-08 11:40:41,324 P598114 INFO ===
+2024-07-08 11:40:41,325 P598114 INFO [Metrics] AUC: 0.785434 - logloss: 0.154549
+2024-07-08 11:40:41,326 P598114 INFO Save best model: monitor(max)=0.785434
+2024-07-08 11:40:41,941 P598114 INFO ************ Epoch=1 end ************
+2024-07-08 11:51:45,305 P598114 INFO Train loss: 0.168634
+2024-07-08 11:51:45,305 P598114 INFO Evaluation @epoch 2 - batch 11310: 
+2024-07-08 11:52:11,740 P598114 INFO ===
+2024-07-08 11:52:11,740 P598114 INFO [Metrics] AUC: 0.787394 - logloss: 0.154141
+2024-07-08 11:52:11,741 P598114 INFO Save best model: monitor(max)=0.787394
+2024-07-08 11:52:13,649 P598114 INFO ************ Epoch=2 end ************
+2024-07-08 12:03:16,046 P598114 INFO Train loss: 0.169877
+2024-07-08 12:03:16,047 P598114 INFO Evaluation @epoch 3 - batch 11310: 
+2024-07-08 12:03:43,019 P598114 INFO ===
+2024-07-08 12:03:43,019 P598114 INFO [Metrics] AUC: 0.787913 - logloss: 0.154029
+2024-07-08 12:03:43,020 P598114 INFO Save best model: monitor(max)=0.787913
+2024-07-08 12:03:44,867 P598114 INFO ************ Epoch=3 end ************
+2024-07-08 12:14:38,302 P598114 INFO Train loss: 0.170653
+2024-07-08 12:14:38,302 P598114 INFO Evaluation @epoch 4 - batch 11310: 
+2024-07-08 12:15:04,321 P598114 INFO ===
+2024-07-08 12:15:04,322 P598114 INFO [Metrics] AUC: 0.788331 - logloss: 0.153978
+2024-07-08 12:15:04,323 P598114 INFO Save best model: monitor(max)=0.788331
+2024-07-08 12:15:06,050 P598114 INFO ************ Epoch=4 end ************
+2024-07-08 12:25:48,629 P598114 INFO Train loss: 0.171417
+2024-07-08 12:25:48,629 P598114 INFO Evaluation @epoch 5 - batch 11310: 
+2024-07-08 12:26:14,515 P598114 INFO ===
+2024-07-08 12:26:14,515 P598114 INFO [Metrics] AUC: 0.788314 - logloss: 0.153932
+2024-07-08 12:26:14,516 P598114 INFO Monitor(max)=0.788314 STOP!
+2024-07-08 12:26:14,516 P598114 INFO Reduce learning rate on plateau: 0.000100
+2024-07-08 12:26:14,661 P598114 INFO ************ Epoch=5 end ************
+2024-07-08 12:37:11,179 P598114 INFO Train loss: 0.155668
+2024-07-08 12:37:11,179 P598114 INFO Evaluation @epoch 6 - batch 11310: 
+2024-07-08 12:37:37,991 P598114 INFO ===
+2024-07-08 12:37:37,992 P598114 INFO [Metrics] AUC: 0.805286 - logloss: 0.150542
+2024-07-08 12:37:37,993 P598114 INFO Save best model: monitor(max)=0.805286
+2024-07-08 12:37:39,702 P598114 INFO ************ Epoch=6 end ************
+2024-07-08 12:48:35,249 P598114 INFO Train loss: 0.150646
+2024-07-08 12:48:35,249 P598114 INFO Evaluation @epoch 7 - batch 11310: 
+2024-07-08 12:49:01,781 P598114 INFO ===
+2024-07-08 12:49:01,781 P598114 INFO [Metrics] AUC: 0.807243 - logloss: 0.150103
+2024-07-08 12:49:01,782 P598114 INFO Save best model: monitor(max)=0.807243
+2024-07-08 12:49:03,608 P598114 INFO ************ Epoch=7 end ************
+2024-07-08 12:59:57,816 P598114 INFO Train loss: 0.150391
+2024-07-08 12:59:57,816 P598114 INFO Evaluation @epoch 8 - batch 11310: 
+2024-07-08 13:00:24,683 P598114 INFO ===
+2024-07-08 13:00:24,684 P598114 INFO [Metrics] AUC: 0.806679 - logloss: 0.150286
+2024-07-08 13:00:24,685 P598114 INFO Monitor(max)=0.806679 STOP!
+2024-07-08 13:00:24,685 P598114 INFO Reduce learning rate on plateau: 0.000010
+2024-07-08 13:00:24,816 P598114 INFO ************ Epoch=8 end ************
+2024-07-08 13:11:17,040 P598114 INFO Train loss: 0.140887
+2024-07-08 13:11:17,040 P598114 INFO Evaluation @epoch 9 - batch 11310: 
+2024-07-08 13:11:44,043 P598114 INFO ===
+2024-07-08 13:11:44,043 P598114 INFO [Metrics] AUC: 0.802481 - logloss: 0.153183
+2024-07-08 13:11:44,045 P598114 INFO Monitor(max)=0.802481 STOP!
+2024-07-08 13:11:44,045 P598114 INFO Reduce learning rate on plateau: 0.000001
+2024-07-08 13:11:44,045 P598114 INFO ********* Epoch==9 early stop *********
+2024-07-08 13:11:44,176 P598114 INFO Training finished.
+2024-07-08 13:11:44,176 P598114 INFO Load best model: /mnt/public/lhh/code/model_zoo/ECN/ECN_torch/checkpoints/KDD12_x10/ECN_KDD12_001_39a526f3.model
+2024-07-08 13:11:44,373 P598114 INFO ****** Validation evaluation ******
+2024-07-08 13:12:10,908 P598114 INFO ===
+2024-07-08 13:12:10,909 P598114 INFO [Metrics] logloss: 0.150103 - AUC: 0.807243
+2024-07-08 13:12:10,983 P598114 INFO ******** Test evaluation ********
+2024-07-08 13:12:10,983 P598114 INFO Loading data...
+2024-07-08 13:12:10,983 P598114 INFO Loading data from h5: ../../../data/KDD12_x10/test.h5
+2024-07-08 13:12:13,738 P598114 INFO Test samples: total/14137104, blocks/1
+2024-07-08 13:12:13,738 P598114 INFO Loading test data done.
+2024-07-08 13:12:40,926 P598114 INFO ===
+2024-07-08 13:12:40,927 P598114 INFO [Metrics] logloss: 0.149897 - AUC: 0.807420

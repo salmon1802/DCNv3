@@ -25,7 +25,7 @@ from fuxictr import autotuner
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='./config/DCNv3_tuner_config_KKBox.yaml',
+    parser.add_argument('--config', type=str, default='./config/ECN_tuner_config_KKBox.yaml',
                         help='The config file for para tuning.')
     parser.add_argument('--tag', type=str, default=None,
                         help='Use the tag to determine which expid to run (e.g. 001 for the first expid).')
