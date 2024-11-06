@@ -1,4 +1,5 @@
 If you have any questions, feel free to ask!  :)
+To ensure the correctness of the experimental results, please run DCNv3 in FuxiCTR==2.0.1 or the latest version.
 # DCNv3: Towards Next Generation Deep Cross Network for Click-Through Rate Prediction
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dcnv3-towards-next-generation-deep-cross/click-through-rate-prediction-on-criteo)](https://paperswithcode.com/sota/click-through-rate-prediction-on-criteo?p=dcnv3-towards-next-generation-deep-cross)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dcnv3-towards-next-generation-deep-cross/click-through-rate-prediction-on-kdd12)](https://paperswithcode.com/sota/click-through-rate-prediction-on-kdd12?p=dcnv3-towards-next-generation-deep-cross)
@@ -29,7 +30,7 @@ If you have any questions, feel free to ask!  :)
 ## Requirements
 python>=3.6  
 pytorch>=1.0  
-fuxictr  
+fuxictr==2.0.1 or lastest  
 PyYAML  
 pandas  
 scikit-learn  
