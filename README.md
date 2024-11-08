@@ -29,7 +29,7 @@ If you have any questions, feel free to ask!  :)
 
 ## Requirements
 python>=3.6  
-pytorch>=1.0  
+pytorch>=1.10  
 fuxictr==2.0.1 or lastest  
 PyYAML  
 pandas  
